@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libri</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Libri</h1>
+    <button type="btn", id="btn">Scarica Dati</button>
+    <table id="tabella" class="table table-striped">
+        <tr>
+            <th>Titolo</th>
+            <th>Autore</th>
+            <th>Prezzo</th>
+            <th>Pagine</th>
+        </tr>
+    </table>
+    </div>
+    <script>
+        const URL = "./read.php";
+
+        document.getElementById("btn").addEventListener("click", function(){
+
+        fetch(URL)
+            .then(res => res.json())
+            .then(libri => {
+                for(const libro of libri.data){
+                    const TR = document.createElement("tr")
+                    const TD1 = document.createElement("td")
+                    TD1.textContent = libro.titolo
+                    const TD2 = document.createElement("td")
+                    TD2.textContent = libro.autore
+                    const TD3 = document.createElement("td")
+                    TD3.textContent = libro.prezzo
+                    const TD4 = document.createElement("td")
+                    TD4.textContent = libro.pagine
+
+                    TR.append(TD1,TD2,TD3,TD4)
+                    document.getElementById("tabella").append(TR)
+                }
+                console.log(libri.data);
+            })
+        })
+    </script>
+</body>
+</html>
