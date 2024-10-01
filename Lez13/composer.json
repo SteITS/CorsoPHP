@@ -1,0 +1,20 @@
+{
+    "name": "icts23-25.097/lez13",
+    "description": "Descrizione del progetto",
+    "type": "project",
+    "license": "ITS",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SteITS",
+            "email": "stefan.stanescu@edu.itspiemonte.it"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    }
+}
