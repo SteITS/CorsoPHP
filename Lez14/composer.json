@@ -1,0 +1,18 @@
+{
+    "name": "ste/app",
+    "description": "Mercatino dell'usato",
+    "type": "project",
+    "license": "ITS",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SteITS",
+            "email": "stefan.stanescu@edu.itspiemonte.it"
+        }
+    ],
+    "require": {}
+}

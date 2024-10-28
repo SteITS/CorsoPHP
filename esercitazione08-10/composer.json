@@ -1,0 +1,16 @@
+{
+    "name": "stwfy/app",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SteITS",
+            "email": "stefan.stanescu@edu.itspiemonte.it"
+        }
+    ],
+    "require": {}
+}
