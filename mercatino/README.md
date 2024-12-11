@@ -47,4 +47,12 @@ Per runnare il sito : ```php artisan serve```
 <br>
 Per runnare il servizio di autenticazione: ```npm run dev```
 <br>
+Per vedere le path API: ```php artisan route:list --path=api```
 
+```API routes:```
+
+    GET|HEAD  api/products ............................................................................................................................. Api\ProductControllerApi@index
+    POST      api/products ............................................................................................................................. Api\ProductControllerApi@store  
+    GET|HEAD  api/products/{id} ......................................................................................................................... Api\ProductControllerApi@show  
+    PUT       api/products/{id} ....................................................................................................................... Api\ProductControllerApi@update  
+    DELETE    api/products/{id}

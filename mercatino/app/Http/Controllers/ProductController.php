@@ -27,6 +27,8 @@ class ProductController extends Controller
 
     $products = $query->get();
 
+    $products = $query->paginate(2); // 10 items per page
+
     return view('products.index', compact('products', 'categories'));
 }
 
